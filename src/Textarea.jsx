@@ -17,6 +17,8 @@ export default function Textarea() {
         } else if (newText.includes('<html>')) {
             setWarningText('No html tag allowed!')
             newText = newText.replace('<html>', '');
+        } else {
+            setWarningText('');
         }
         setText(newText);
     }
